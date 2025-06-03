@@ -1,6 +1,7 @@
 @wp-post-grid-margin: 2%;
 @wp-post-grid-columns__s: 2;
 
+@wp-post-widget-columns__xs: 1;
 @wp-post-widget-columns__s: 2;
 @wp-post-widget-columns__l: 4;
 
@@ -38,7 +39,10 @@
     }
 
     .widget-blog-posts {
-        --columns-count: @wp-post-widget-columns__s;
+        --columns-count: @wp-post-widget-columns__xs;
+        @media @media-sm {
+            --columns-count: @wp-post-widget-columns__s;
+        }
         @media @media-lg {
             --columns-count: @wp-post-widget-columns__l;
         }
